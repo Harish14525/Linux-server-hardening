@@ -4,7 +4,7 @@
  
  Author: Harish Babu G
 
-### Overview: >
+### Overview: 
    This project demonstrates Linux server hardening by securing SSH, configuring
    firewall rules, and protecting against brute-force attacks. Additionally, live
    network traffic was captured and analyzed to ensure no credentials were exposed.
