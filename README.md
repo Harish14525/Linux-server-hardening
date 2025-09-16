@@ -1,2 +1,29 @@
-# Linux-server-hardening
-Linux Server Hardening Project – Capture and analyze network traffic, secure SSH, and implement firewall and intrusion prevention measures.
+project:
+  name: "Linux Server Hardening – Network Traffic Capture & Analysis"
+  author: "Harish Babu G"
+  overview: >
+    This project demonstrates Linux server hardening by securing SSH, configuring
+    firewall rules, and protecting against brute-force attacks. Additionally, live
+    network traffic was captured and analyzed to ensure no credentials were exposed.
+
+objective:
+  - Capture and analyze live SSH network traffic.
+  - Implement hardening measures:
+      - Disable root login
+      - Enforce key-based authentication
+      - Configure UFW firewall
+      - Install and configure Fail2ban
+
+tools_used:
+  - Ubuntu (Docker container)
+  - Kali Linux
+  - OpenSSH Server
+  - UFW (Uncomplicated Firewall)
+  - Fail2ban
+  - tcpdump & Wireshark
+
+deliverables:
+  - Before/After summary of server hardening
+  - Applied commands list
+  - Network traffic capture (pcap)
+  - Screenshots (see screenshots folder)
