@@ -1,6 +1,7 @@
 ### Report
-Author: "Harish Babu G"
-Project_title: "Linux Server Hardening – Network Traffic Capture & Analysis"
+Author: Harish Babu G
+
+Project title: "Linux Server Hardening – Network Traffic Capture & Analysis"
 
 ### Overview
   This project focuses on strengthening the security posture of an Ubuntu server 
