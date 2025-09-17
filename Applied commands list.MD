@@ -9,9 +9,10 @@ description: >
   to enable key-based SSH login.
 
 commands:
+```
   - "ssh-keygen -t rsa -b 4096 -f ~/.ssh/harish_key  # Generate 4096-bit RSA key pair"
   - "ssh-copy-id -i ~/.ssh/harish_key.pub harish@<container_ip>  # Copy public key to Ubuntu container"
-
+```
 ### SSH Hardening
 description: >
   Disable root login and password authentication on Ubuntu SSH server.
