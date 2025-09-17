@@ -1,9 +1,8 @@
 ### Report
-author: "Harish Babu G"
-project_title: "Linux Server Hardening – Network Traffic Capture & Analysis"
+Author: "Harish Babu G"
+Project_title: "Linux Server Hardening – Network Traffic Capture & Analysis"
 
 ### Overview
-description: 
   This project focuses on strengthening the security posture of an Ubuntu server 
   running in a Docker container by applying industry-standard hardening measures. 
   The main objectives include securing SSH access, implementing firewall rules, 
@@ -25,7 +24,6 @@ tools_used:
 ### Steps Performed
 
 #### SSH Key Generation and Copy
-description: 
   Generated a secure RSA key pair on Kali Linux with 4096-bit encryption. The public 
   key was copied to the Ubuntu container to enforce key-based authentication. 
   This ensures that SSH login is possible only using cryptographic keys, 
@@ -34,33 +32,28 @@ commands_summary:
   Full commands provided in the 'applied_commands_list.txt' file.
 
 #### SSH Hardening
-description: 
   Configured SSH daemon to disable root login and password authentication by editing 
   /etc/ssh/sshd_config. Restarted SSH service to apply the changes. These measures 
   prevent attackers from directly targeting the root account or guessing passwords 
   via brute-force attacks.
 
 #### UFW Firewall Configuration
-description: 
   Enabled UFW firewall and configured it to allow only SSH traffic on port 22 while 
   denying all other incoming connections. Outgoing traffic was allowed by default. 
   Firewall status was verified to ensure only permitted traffic can reach the server.
 
 #### Fail2ban Installation and Configuration
-description: 
   Installed Fail2ban and configured it to monitor SSH login attempts. Any IP exceeding 
   3 failed login attempts within the defined interval is temporarily banned. This 
   prevents automated brute-force attacks and reduces the risk of unauthorized access.
 
 #### Traffic Capture and Analysis
-description: 
   Captured live SSH traffic using tcpdump and transferred the pcap file to Kali 
   Linux for analysis in Wireshark. Filters were applied to focus on port 22 traffic. 
   Observations confirmed that all SSH traffic is encrypted after the initial handshake, 
   including authentication attempts. No plaintext passwords or credentials were visible.
 
 ### Before and After Summary
-description: 
   The table below summarizes the key security features before and after hardening:
 
 | Feature                  | Before Configuration           | After Configuration                      |
@@ -72,7 +65,6 @@ description:
 | Traffic Security          | Passwords could be exposed     | All SSH traffic encrypted and secure    |
 
 ### Network Traffic Analysis Findings
-description: 
   Detailed analysis of SSH traffic revealed the following:
   - Handshake packets confirm exchange of key algorithms and initiation of encryption.
   - "New Keys" packets indicate encryption is active and all subsequent traffic is secure.
@@ -81,7 +73,6 @@ description:
   - Even temporary enabling of password authentication did not expose passwords in transit.
 
 ### Conclusion
-description: 
   The applied hardening measures significantly improved the security posture of the server:
   - Root login disabled, reducing high-privilege attack risk.
   - Password authentication disabled, enforcing key-based authentication.
@@ -98,6 +89,5 @@ description:
 - Consider additional hardening measures such as SSH rate-limiting and monitoring system logs.
 
 ### Screenshots
-description: 
   All relevant screenshots, including SSH configuration, UFW status, Fail2ban monitoring, 
   and Wireshark traffic analysis, are included in the 'screenshots' folder.
